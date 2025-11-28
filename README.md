@@ -1,2 +1,3 @@
-# xcss-scaffold
-Template for creating flavours of XCSS
+# XCSS Scaffold
+
+Template for creating flavours for XCSS
