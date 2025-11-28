@@ -1,0 +1,49 @@
+{
+  "name": "xcss-scaffold",
+  "description": "A powerful CSS kernel for building customized, scalable, and high-performance frontend frameworks. Seamlessly blend the raw potential of CSS with the ease of pre-made utilities, managed by a core orchestrator that optimizes HTML and JavaScript performance for modern web applications.",
+  "version": "0.0.3",
+  "main": "./execute/package.js",
+  "exports": "./execute/package.js",
+  "typings": "./execute/package.d.ts",
+  "bin": {
+    "xcss": "./execute/package.js",
+    "xdev": "./compiler/scripts/live.sh"
+  },
+  "scripts": {
+    "install": "node post-install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yshelldev/xcss-scaffold"
+  },
+  "keywords": [
+    "css",
+    "xcss",
+    "styles",
+    "semantic",
+    "frontend",
+    "design",
+    "framework"
+  ],
+  "author": {
+    "name": "Vyshnav Prasad",
+    "url": "https://www.yshell.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://www.xcss.io",
+  "bugs": {
+    "url": "https://github.com/yshelldev/xcss-scaffold/issues"
+  },
+  "contributing": "https://github.com/yshelldev/xcss-scaffold/blob/main/CONTRIBUTING.md",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/yshelldev"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "xcss-package": "^0.0.3"
+  }
+}

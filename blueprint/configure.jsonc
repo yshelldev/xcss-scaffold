@@ -1,7 +1,4 @@
 {
-  "name": "",
-  "version": "",
-  "vendors": "none",
   "proxymap": [
     {
       "source": "src",
@@ -23,9 +20,11 @@
     // prefix for styles replacement tags 
     "styles-suffix": "</style>",
     // suffix for styles replacement tags 
-    // EXPERIMENTAL
+    //
+    // === EXPERIMENTAL ===
     "reload-period": 0
     // rebuild interval in seconds, (0 => no reload)
   },
+  "vendors": "none",
   "environment": "browser"
 }
