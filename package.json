@@ -1,9 +1,9 @@
 {
   "name": "xcss-scaffold",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "configs": {
-    "name": "xcss-scaffold",
-    "version": "0.0.0",
+    "name": "scaffold",
+    "version": "0.0.1",
     "sandbox": "sandbox",
     "blueprint": "blueprint",
     "libraries": "libraries"
@@ -26,8 +26,5 @@
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/yshelldev"
-  },
-  "engines": {
-    "node": ">=14.0.0"
   }
 }
