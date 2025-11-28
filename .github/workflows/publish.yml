@@ -29,6 +29,6 @@ jobs:
       - name: Publish package to npm
         working-directory: .
         run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.XCSS_NPM }}
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.XCSS_NPM }}
           
