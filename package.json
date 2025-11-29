@@ -1,9 +1,9 @@
 {
   "name": "xcss-scaffold",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "configs": {
     "name": "scaffold",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "sandbox": "sandbox",
     "blueprint": "blueprint",
     "libraries": "libraries"
