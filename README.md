@@ -1,5 +1,26 @@
 # XCSS Scaffold
 
+## Installation
+
+### Prerequisites
+- Install [xcss-package](https://www.npmjs.com/package/xcss-package).
+- Ensure either `xcss` or `xpin` is available in your CLI.
+
+### Commands
+Run one of the following commands based on your setup:
+
+#### Global Installation
+- `xpin xcss-scaffold`
+- `xcss spin xcss-scaffold`
+
+#### Local (Project Directory) Installation
+- `npx xpin xcss-scaffold`
+- `npx xcss spin xcss-scaffold`
+
+---
+
+# How to spin your Flavour?
+
 Use this scaffold template as a starting point for your customized CSS framework.
 
 ## Setup Steps
