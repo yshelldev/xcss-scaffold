@@ -24,6 +24,8 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
 
-      - run: npm install -g npm@latest
+      - name: Initialize Directory
+        run: npm install -g npm@latest
+
       - run: npm publish
 
