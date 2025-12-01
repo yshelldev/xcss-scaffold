@@ -1,0 +1,95 @@
+@import url("../#constants.css");
+
+// Transition properties with default duration: 300ms ease
+$transition-properties: (
+    none: none,
+    all: all,
+    transform: transform,
+    opacity: opacity,
+    background: background,
+    color: color,
+    shadow: box-shadow,
+    border: border,
+    height: height,
+    width: width,
+    filter: filter,
+    margin: margin,
+    padding: padding,
+    top: top,
+    left: left,
+    right: right,
+    bottom: bottom,
+    max-height: max-height,
+    max-width: max-width,
+    visibility: visibility,
+    font-size: font-size,
+);
+
+// Generate transition property utilities
+@each $name, $property in $transition-properties {
+    .transition-#{$name} {
+
+        // Use 'none' as special case without duration/timing
+        @if $property ==none {
+            transition: none;
+        }
+
+        @else {
+            transition: #{$property} 300ms ease;
+        }
+    }
+}
+
+// Transition durations (in ms)
+$transition-durations: (
+    75: 75ms,
+    100: 100ms,
+    150: 150ms,
+    200: 200ms,
+    250: 250ms,
+    300: 300ms,
+    400: 400ms,
+    500: 500ms,
+    700: 700ms,
+    1000: 1000ms,
+    1500: 1500ms,
+);
+
+// Generate duration utilities
+@each $key, $value in $transition-durations {
+    .duration-#{$key} {
+        transition-duration: #{$value};
+    }
+}
+
+// Transition delays (in ms)
+$transition-delays: $transition-durations; // Reuse same set for delays
+
+@each $key, $value in $transition-delays {
+    .delay-#{$key} {
+        transition-delay: #{$value};
+    }
+}
+
+// Transition timing functions
+$timing-functions: (
+    ease: ease,
+    linear: linear,
+    ease-in: ease-in,
+    ease-out: ease-out,
+    ease-in-out: ease-in-out,
+    ease-elastic: cubic-bezier(.68, -0.55, .27, 1.55),
+    ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1),
+    ease-bounce: cubic-bezier(.53, 2, .36, .85),
+    steps-2: steps(2),
+    steps-4: steps(4),
+    steps-end: steps(1, end),
+    steps-start: steps(1, start),
+);
+
+// Generate timing function utilities
+@each $name, $func in $timing-functions {
+    .timing-#{$name} {
+        transition-timing-function: #{$func};
+    }
+}

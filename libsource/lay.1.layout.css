@@ -14,7 +14,7 @@
         --layout-direction: row;
     }
 
-    &[direction="column"] {
+    &[direction="column"]& {
         --layout-direction: column;
     }
 
