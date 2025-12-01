@@ -1,7 +1,4 @@
 {
-  "vendors": "none",
-  "flavour": "xcss-scaffold",
-  "environment": "browser",
   "proxymap": [
     {
       "source": "src",
@@ -27,5 +24,7 @@
     // === EXPERIMENTAL ===
     "reload-period": 0
     // rebuild interval in seconds, (0 => no reload)
-  }
+  },
+  "vendors": "none",
+  "environment": "browser" // Used by extension 
 }
