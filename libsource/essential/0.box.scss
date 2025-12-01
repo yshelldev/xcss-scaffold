@@ -1,0 +1,199 @@
+// Original spacing scale map
+$spacing-scale: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  32: 8rem,
+  40: 10rem,
+  48: 12rem,
+  56: 14rem,
+  64: 16rem,
+);
+
+@mixin generate-spacing-utilities($prefix, $property, $include-auto: false) {
+  @if $include-auto {
+    .#{$prefix}-auto {
+      #{$property}: auto;
+    }
+  }
+
+  @each $key, $value in $spacing-scale {
+    .#{$prefix}-#{$key} {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+// Generate margin classes
+@include generate-spacing-utilities(m, margin, true);
+@include generate-spacing-utilities(mx, margin-inline, true);
+@include generate-spacing-utilities(my, margin-block, true);
+
+// Generate padding classes
+@include generate-spacing-utilities(p, padding, true);
+@include generate-spacing-utilities(px, padding-inline, true);
+@include generate-spacing-utilities(py, padding-block, true);
+
+.border-none {
+  border-style: none;
+}
+.border-solid {
+  border-style: solid;
+}
+.border-dashed {
+  border-style: dashed;
+}
+.border-dotted {
+  border-style: dotted;
+}
+.border-double {
+  border-style: double;
+}
+
+/* Outline Utilities */
+.outline-0 {
+  outline: 0;
+}
+.outline-025 {
+  outline: 0.0625rem;
+}
+.outline-05 {
+  outline: 0.125rem;
+}
+.outline-1 {
+  outline: 0.25rem;
+}
+.outline-2 {
+  outline: 0.5rem;
+}
+.outline-3 {
+  outline: 0.75rem;
+}
+.outline-4 {
+  outline: 1rem;
+}
+.outline-6 {
+  outline: 1.5rem;
+}
+.outline-8 {
+  outline: 2rem;
+}
+
+.outline-none {
+  outline-style: none;
+}
+.outline-solid {
+  outline-style: solid;
+}
+.outline-dashed {
+  outline-style: dashed;
+}
+.outline-dotted {
+  outline-style: dotted;
+}
+.outline-double {
+  outline-style: double;
+}
+
+/* Border Radius Utilities */
+.radius-025 {
+  border-radius: 0.0625rem;
+}
+.radius-05 {
+  border-radius: 0.125rem;
+}
+.radius-0 {
+  border-radius: 0;
+}
+.radius-1 {
+  border-radius: 0.25rem;
+}
+.radius-2 {
+  border-radius: 0.5rem;
+}
+.radius-3 {
+  border-radius: 0.75rem;
+}
+.radius-4 {
+  border-radius: 1rem;
+}
+.radius-6 {
+  border-radius: 1.5rem;
+}
+.radius-8 {
+  border-radius: 2rem;
+}
+.radius-12 {
+  border-radius: 3rem;
+}
+.radius-16 {
+  border-radius: 4rem;
+}
+.radius-full {
+  border-radius: 50%;
+}
+
+.radius-xs {
+  border-radius: var(---rounded-xs);
+}
+.radius-sm {
+  border-radius: var(---rounded-sm);
+}
+.radius-md {
+  border-radius: var(---rounded-md);
+}
+.radius-lg {
+  border-radius: var(---rounded-lg);
+}
+.radius-xl {
+  border-radius: var(---rounded-xl);
+}
+
+/* Sizing Utilities */
+.w-auto {
+  width: auto;
+}
+.w-0 {
+  width: 0;
+}
+.w-25 {
+  width: 25%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-100 {
+  width: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+.h-0 {
+  height: 0;
+}
+.h-25 {
+  height: 25%;
+}
+.h-50 {
+  height: 50%;
+}
+.h-75 {
+  height: 75%;
+}
+.h-100 {
+  height: 100%;
+}

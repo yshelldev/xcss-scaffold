@@ -1,0 +1,108 @@
+@import url("../#constants.css");
+
+// Define translate sizes for x, y, z directions
+$translate-sizes: (
+    0: 0,
+    xs: var(---size-xs),
+    sm: var(---size-sm),
+    md: var(---size-md),
+    lg: var(---size-lg),
+    xl: var(---size-xl),
+    025: 0.015625rem,
+    05: 0.03125rem,
+    1: 0.0625rem,
+    2: 0.125rem,
+    3: 0.1875rem,
+    4: 0.25rem,
+    6: 0.375rem,
+    8: 0.5rem,
+    10: 0.625rem,
+    12: 0.75rem,
+    16: 1rem,
+    24: 1.5rem,
+    32: 2rem
+);
+
+// Generate translate utilities for each axis
+@each $axis in (x, y, z) {
+    @each $key, $value in $translate-sizes {
+        .translate-#{$axis}-#{$key} {
+            transform: translate#{$axis}(#{$value});
+        }
+    }
+}
+
+// Scale utilities map
+$scales: (
+    0: 0,
+    25: 0.25,
+    50: 0.5,
+    75: 0.75,
+    90: 0.9,
+    100: 1,
+    105: 1.05,
+    110: 1.1,
+    125: 1.25,
+    150: 1.5,
+    200: 2
+);
+
+// Generate scale utilities
+@each $key, $value in $scales {
+    .scale-#{$key} {
+        transform: scale(#{$value});
+    }
+}
+
+// Rotate utilities map (degrees)
+$rotates: (
+    0: 0deg,
+    15: 15deg,
+    30: 30deg,
+    45: 45deg,
+    60: 60deg,
+    90: 90deg,
+    120: 120deg,
+    180: 180deg,
+    270: 270deg,
+    360: 360deg
+);
+
+// Generate rotate utilities for 2D
+@each $key, $value in $rotates {
+    .rotate-#{$key} {
+        transform: rotate(#{$value});
+    }
+}
+
+// Generate rotate utilities for 3D axes: x, y, z
+@each $axis in (x, y, z) {
+    @each $key, $value in $rotates {
+        .rotate-#{$axis}-#{$key} {
+            transform: rotate#{$axis}(#{$value});
+        }
+    }
+}
+
+// Skew utilities map (degrees)
+$skews: (
+    0: 0deg,
+    5: 5deg,
+    10: 10deg,
+    15: 15deg,
+    30: 30deg
+);
+
+// Generate skew utilities for x and y axes
+@each $axis in (x, y) {
+    @each $key, $value in $skews {
+        .skew-#{$axis}-#{$key} {
+            transform: skew#{$axis}(#{$value});
+        }
+    }
+}
+
+// Special single rule for transform-none
+.transform-none {
+    transform: none;
+}

@@ -27,5 +27,6 @@ jobs:
       - name: Initialize Directory
         run: npm install -g npm@latest
 
+      - run: npm run build
       - run: npm publish
 

@@ -8,6 +8,11 @@
     "blueprint": "blueprint",
     "libraries": "libraries"
   },
+  "scripts": {
+    "lib:compile": "npx sass libsource:libraries --no-source-map",
+    "lib:watch": "npx sass --watch libsource:libraries --no-source-map",
+    "build": "npm run lib:compile "
+  },
   "type": "module",
   "description": "Template for creating flavours for XCSS.",
   "license": "MIT",
@@ -31,5 +36,8 @@
     "css",
     "xcss-template",
     "css-framework"
-  ]
+  ],
+  "dev-dependencies": {
+    "sass": "^1.94.2"
+  }
 }

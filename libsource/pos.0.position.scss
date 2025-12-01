@@ -1,0 +1,135 @@
+// Anchor (Transform-Origin) Utilities (designer-friendly names)
+$anchor-positions: (
+  topLeft: top left,
+  topCenter: top center,
+  topRight: top right,
+  centerLeft: center left,
+  center: center center,
+  centerRight: center right,
+  bottomLeft: bottom left,
+  bottomCenter: bottom center,
+  bottomRight: bottom right
+);
+
+@each $name, $value in $anchor-positions {
+  .origin-#{$name} {
+    transform-origin: #{$value};
+  }
+}
+
+// Variable-powered origin for advanced use
+.origin-custom {
+  --origin-x: 50%;
+  --origin-y: 50%;
+  transform-origin: var(--origin-x) var(--origin-y);
+}
+
+// Position utilities with clearer terms
+$positions: (
+  static: static,
+  relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+  sticky: sticky
+);
+
+@each $name, $val in $positions {
+  .pos-#{$name} {
+    position: #{$val};
+  }
+}
+
+// Offset sizes with designer-friendly units
+$offset-sizes: (
+  none: 0,
+  xSmall: var(---pos-top-xs, 0.25rem),
+  small: var(---pos-top-sm, 0.5rem),
+  medium: var(---pos-top-md, 1rem),
+  large: var(---pos-top-lg, 2rem),
+  xLarge: var(---pos-top-xl, 4rem)
+);
+
+@each $side in (top, bottom, left, right) {
+  @each $name, $val in $offset-sizes {
+    .#{$side}-#{$name} {
+      #{$side}: #{$val};
+    }
+  }
+}
+
+// Centering Utilities with clearer naming
+.top-center, .bottom-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left-center, .right-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Z-index with positive and negative clearly marked
+$zindexes: (
+  auto: auto,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  10: 10,
+  20: 20,
+  30: 30,
+  40: 40,
+  50: 50,
+  100: 100,
+  neg-1: -1,
+  neg-2: -2,
+  neg-3: -3,
+  neg-4: -4,
+  neg-5: -5,
+  neg-10: -10,
+  neg-20: -20,
+  neg-30: -30,
+  neg-40: -40,
+  neg-50: -50,
+  neg-100: -100
+);
+
+@each $name, $val in $zindexes {
+  .layer-#{$name} {
+    z-index: #{$val};
+  }
+}
+
+// Full stretch utilities with friendly names
+.full-inset {
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+.auto-inset {
+  top: auto; right: auto; bottom: auto; left: auto;
+}
+.full-width {
+  left: 0; right: 0;
+}
+.full-height {
+  top: 0; bottom: 0;
+}
+.center-horizontal {
+  left: 50%; right: auto;
+  transform: translateX(-50%);
+}
+.center-vertical {
+  top: 50%; bottom: auto;
+  transform: translateY(-50%);
+}
+
+// Isolation utilities with natural names
+.isolated { isolation: isolate; }
+.default-isolation { isolation: auto; }
