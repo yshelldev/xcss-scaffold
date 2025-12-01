@@ -8,80 +8,43 @@ Use this repository as a template to create your own XCSS frameworks and flavors
 
 - [Installation](#installation)
 - [Create Flavour](#how-to-spin-your-flavour)
+- [Learn XCSS Syntax](https://www.xcss.io/documentation)
 
-## Installation
+# Installation
 
-### Prerequisites
-
-1. Install the core **xcss-package** via your preferred package manager:
-
-```sh
-  npm i xcss-package
-
-  yarn add xcss-package
-
-  pnpm add xcss-package
-```
-
-2. Verify `xcss` or `xpin` CLI is available (provided by the **xcss-package**). Check if any of them are available with your preffered package runner
+1. Install the **xcss-scaffold** using your package manager:
 
 ```sh
-  npx xcss
-  npx xpin
-
-  yarn dlx xcss
-  yarn dlx xpin
-
-  pnpm exec xcss
-  pnpm exec xpin
+  npm install xcss-scaffold
+  yarn add xcss-scaffold
+  pnpm add xcss-scaffold
 ```
 
-### Install Flavor
-
-Install the `xcss-scaffold` flavor:
+2. Initialize XCSS in your project:
 
 ```sh
-  npm i xcss-scaffold
-
-  yarn add xcss-package
-
-  pnpm add xcss-package`
+  xcss init
 ```
 
-### Scaffold Project
+3. Update `xcss/configure.jsonc` with your flavour and other settings:
 
-Spin flavour reference of **xcss-package** to **xcss-scaffold**:
+```jsonc
+{...
+  "flavour": "xcss-scaffold"
+...}
+```
+
+4. Rerun `xcss init` to apply new configs and perform a health check.
 
 ```sh
-  npx xpin xcss-scaffold
-  npx xcss spin xcss-scaffold
-
-  yarn dlx xpin xcss-scaffold
-  yarn dlx xcss spin xcss-scaffold
-
-  pnpm exec xpin xcss-scaffold
-  pnpm exec xcss spin xcss-scaffold
+  xcss init
 ```
-
-The command automatically updates references to the new flavor.
-
-### Initialize
-
-In an unconfigured project, run:
-```sh
-  npm i xcss init
-
-  yarn add xcss init
-
-  pnpm add xcss init
-```
-This sets up XCSS Setup directory and boilerplate.
 
 ---
 
 # How to spin your Flavour?
 
-Use this scaffold template as a starting point for your customized CSS framework. Follow the following steps to updata
+Use this scaffold template as a starting point for your customized CSS framework. Follow the following steps to update.
 
 ## Setup Steps
 

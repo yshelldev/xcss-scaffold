@@ -1,9 +1,9 @@
 {
   "name": "xcss-scaffold",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "configs": {
     "name": "scaffold",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "sandbox": "sandbox",
     "blueprint": "blueprint",
     "libraries": "libraries"
@@ -11,7 +11,7 @@
   "scripts": {
     "lib:compile": "npx sass libsource:libraries --no-source-map",
     "lib:watch": "npx sass --watch libsource:libraries --no-source-map",
-    "build": "npm run lib:compile "
+    "build": "npm install --include=dev && npm run lib:compile "
   },
   "type": "module",
   "description": "Template for creating flavours for XCSS.",
@@ -38,6 +38,9 @@
     "css-framework"
   ],
   "dev-dependencies": {
-    "sass": "^1.94.2"
+    "sass": "latest"
+  },
+  "dependencies": {
+    "xcss-package": "latest"
   }
 }
