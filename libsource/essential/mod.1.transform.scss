@@ -24,6 +24,10 @@ $translate-sizes: (
         .translate-#{$axis}-#{$key} {
             transform: translate#{$axis}(#{$value});
         }
+
+        .-translate-#{$axis}-#{$key} {
+            transform: translate#{$axis}(-#{$value});
+        }
     }
 }
 
@@ -47,6 +51,10 @@ $scales: (
     .scale-#{$key} {
         transform: scale(#{$value});
     }
+
+    .-scale-#{$key} {
+        transform: scale(-#{$value});
+    }
 }
 
 // Rotate utilities map (degrees)
@@ -68,6 +76,10 @@ $rotates: (
     .rotate-#{$key} {
         transform: rotate(#{$value});
     }
+
+    .-rotate-#{$key} {
+        transform: rotate(-#{$value});
+    }
 }
 
 // Generate rotate utilities for 3D axes: x, y, z
@@ -75,6 +87,10 @@ $rotates: (
     @each $key, $value in $rotates {
         .rotate-#{$axis}-#{$key} {
             transform: rotate#{$axis}(#{$value});
+        }
+
+        .-rotate-#{$axis}-#{$key} {
+            transform: rotate#{$axis}(-#{$value});
         }
     }
 }
@@ -93,6 +109,10 @@ $skews: (
     @each $key, $value in $skews {
         .skew-#{$axis}-#{$key} {
             transform: skew#{$axis}(#{$value});
+        }
+
+        .-skew-#{$axis}-#{$key} {
+            transform: skew#{$axis}(-#{$value});
         }
     }
 }

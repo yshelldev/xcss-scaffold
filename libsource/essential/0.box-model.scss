@@ -1,6 +1,5 @@
 // Original spacing scale map
-$spacing-scale: (
-  0: 0,
+$spacing-rems: (
   1: 0.25rem,
   2: 0.5rem,
   3: 0.75rem,
@@ -27,12 +26,14 @@ $spacing-scale: (
     }
   }
 
-  @each $key, $value in $spacing-scale {
+  @each $key, $value in $spacing-rems {
     .#{$prefix}-#{$key} {
       #{$property}: #{$value};
     }
   }
 }
+
+@include generate-spacing-utilities(gap, gap, false);
 
 // Generate margin classes
 @include generate-spacing-utilities(m, margin, true);
@@ -44,156 +45,59 @@ $spacing-scale: (
 @include generate-spacing-utilities(px, padding-inline, true);
 @include generate-spacing-utilities(py, padding-block, true);
 
-.border-none {
-  border-style: none;
-}
-.border-solid {
-  border-style: solid;
-}
-.border-dashed {
-  border-style: dashed;
-}
-.border-dotted {
-  border-style: dotted;
-}
-.border-double {
-  border-style: double;
+// Border styles
+$border-styles: none, solid, dashed, dotted, double;
+
+@each $style in $border-styles {
+  .border-#{$style} {
+    border-style: $style;
+  }
 }
 
-/* Outline Utilities */
-.outline-0 {
-  outline: 0;
-}
-.outline-025 {
-  outline: 0.0625rem;
-}
-.outline-05 {
-  outline: 0.125rem;
-}
-.outline-1 {
-  outline: 0.25rem;
-}
-.outline-2 {
-  outline: 0.5rem;
-}
-.outline-3 {
-  outline: 0.75rem;
-}
-.outline-4 {
-  outline: 1rem;
-}
-.outline-6 {
-  outline: 1.5rem;
-}
-.outline-8 {
-  outline: 2rem;
+// Outline styles
+$outline-styles: none, solid, dashed, dotted, double;
+
+@each $style in $outline-styles {
+  .outline-#{$style} {
+    outline-style: $style;
+  }
 }
 
-.outline-none {
-  outline-style: none;
-}
-.outline-solid {
-  outline-style: solid;
-}
-.outline-dashed {
-  outline-style: dashed;
-}
-.outline-dotted {
-  outline-style: dotted;
-}
-.outline-double {
-  outline-style: double;
+@each $key, $value in $spacing-rems {
+  .outline-#{$key} {
+    outline: $value;
+  }
 }
 
-/* Border Radius Utilities */
-.radius-025 {
-  border-radius: 0.0625rem;
+@each $key, $value in $spacing-rems {
+  .radius-#{$key} {
+    border-radius: $value;
+  }
 }
-.radius-05 {
-  border-radius: 0.125rem;
-}
-.radius-0 {
-  border-radius: 0;
-}
-.radius-1 {
-  border-radius: 0.25rem;
-}
-.radius-2 {
-  border-radius: 0.5rem;
-}
-.radius-3 {
-  border-radius: 0.75rem;
-}
-.radius-4 {
-  border-radius: 1rem;
-}
-.radius-6 {
-  border-radius: 1.5rem;
-}
-.radius-8 {
-  border-radius: 2rem;
-}
-.radius-12 {
-  border-radius: 3rem;
-}
-.radius-16 {
-  border-radius: 4rem;
-}
+
 .radius-full {
   border-radius: 50%;
 }
 
-.radius-xs {
-  border-radius: var(---rounded-xs);
-}
-.radius-sm {
-  border-radius: var(---rounded-sm);
-}
-.radius-md {
-  border-radius: var(---rounded-md);
-}
-.radius-lg {
-  border-radius: var(---rounded-lg);
-}
-.radius-xl {
-  border-radius: var(---rounded-xl);
+// Width utilities
+$scales-percent: (
+  auto: auto,
+  0: 0,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+@each $key, $value in $scales-percent {
+  .w-#{$key} {
+    width: $value;
+  }
 }
 
-/* Sizing Utilities */
-.w-auto {
-  width: auto;
-}
-.w-0 {
-  width: 0;
-}
-.w-25 {
-  width: 25%;
-}
-.w-50 {
-  width: 50%;
-}
-.w-75 {
-  width: 75%;
-}
-.w-100 {
-  width: 100%;
-}
 
-.h-auto {
-  height: auto;
-}
-.h-0 {
-  height: 0;
-}
-.h-25 {
-  height: 25%;
-}
-.h-50 {
-  height: 50%;
-}
-.h-75 {
-  height: 75%;
-}
-.h-100 {
-  height: 100%;
+@each $key, $value in $scales-percent {
+  .h-#{$key} {
+    height: $value;
+  }
 }

@@ -1,223 +1,141 @@
-/* Display Utilities */
-.d-none {
-    display: none;
+// Display utilities
+$display-utilities: (
+    none: none,
+    block: block,
+    inline: inline,
+    inline-block: inline-block,
+    flex: flex,
+    inline-flex: inline-flex,
+    grid: grid,
+    inline-grid: inline-grid,
+    table: table,
+    table-row: table-row,
+    table-cell: table-cell
+);
+
+@each $name, $value in $display-utilities {
+    .d-#{$name} {
+        display: $value;
+    }
 }
 
-.d-block {
-    display: block;
+// Visibility utilities
+$visibility-utilities: (
+    hidden: hidden,
+    visible: visible,
+    collapse: collapse
+);
+
+@each $name, $value in $visibility-utilities {
+    .visibility-#{$name} {
+        visibility: $value;
+    }
 }
 
-.d-inline {
-    display: inline;
+// Overflow utilities
+$overflow-utilities: (
+    auto: auto,
+    hidden: hidden,
+    scroll: scroll
+);
+
+@each $name, $value in $overflow-utilities {
+    .overflow-#{$name} {
+        overflow: $value;
+    }
 }
 
-.d-inline-block {
-    display: inline-block;
+// Cursor utilities
+$cursor-utilities: (
+    pointer: pointer,
+    default: default
+);
+
+@each $name, $value in $cursor-utilities {
+    .cursor-#{$name} {
+        cursor: $value;
+    }
 }
 
-.d-flex {
-    display: flex;
+// Flexbox utilities
+$flex-direction-utilities: (
+    row: row,
+    column: column
+);
+
+@each $name, $value in $flex-direction-utilities {
+    .flex-#{$name} {
+        flex-direction: $value;
+    }
 }
 
-.d-inline-flex {
-    display: inline-flex;
+$flex-wrap-utilities: (
+    wrap: wrap,
+    nowrap: nowrap
+);
+
+@each $name, $value in $flex-wrap-utilities {
+    .flex-#{$name} {
+        flex-wrap: $value;
+    }
 }
 
-.d-grid {
-    display: grid;
+$justify-content-utilities: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around
+);
+
+@each $name, $value in $justify-content-utilities {
+    .justify-#{$name} {
+        justify-content: $value;
+    }
 }
 
-.d-inline-grid {
-    display: inline-grid;
+$align-items-utilities: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    stretch: stretch
+);
+
+@each $name, $value in $align-items-utilities {
+    .align-#{$name} {
+        align-items: $value;
+    }
 }
 
-.d-table {
-    display: table;
-}
+// Opacity utilities (0–1.2 step 0.05)
+$opacity-utilities: (
+    0: 0,
+    5: 0.05,
+    10: 0.1,
+    15: 0.15,
+    20: 0.2,
+    25: 0.25,
+    30: 0.3,
+    35: 0.35,
+    40: 0.4,
+    45: 0.45,
+    50: 0.5,
+    55: 0.55,
+    60: 0.6,
+    65: 0.65,
+    70: 0.7,
+    75: 0.75,
+    80: 0.8,
+    85: 0.85,
+    90: 0.9,
+    95: 0.95,
+    100: 1,
+    110: 1.1,
+    120: 1.2
+);
 
-.d-table-row {
-    display: table-row;
-}
-
-.d-table-cell {
-    display: table-cell;
-}
-
-/* Visibility Utilities */
-.visibility-hidden {
-    visibility: hidden;
-}
-
-.visibility-visible {
-    visibility: visible;
-}
-
-.visibility-collapse {
-    visibility: collapse;
-}
-
-/* Miscellaneous */
-.overflow-auto {
-    overflow: auto;
-}
-
-.overflow-hidden {
-    overflow: hidden;
-}
-
-.overflow-scroll {
-    overflow: scroll;
-}
-
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.cursor-default {
-    cursor: default;
-}
-
-/* Flexbox Utilities */
-.flex-row {
-    flex-direction: row;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.flex-nowrap {
-    flex-wrap: nowrap;
-}
-
-.justify-start {
-    justify-content: flex-start;
-}
-
-.justify-end {
-    justify-content: flex-end;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.justify-around {
-    justify-content: space-around;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-
-.align-end {
-    align-items: flex-end;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.align-stretch {
-    align-items: stretch;
-}
-
-.opacity-0 {
-    opacity: 0;
-}
-
-.opacity-5 {
-    opacity: 0.05;
-}
-
-.opacity-10 {
-    opacity: 0.1;
-}
-
-.opacity-15 {
-    opacity: 0.15;
-}
-
-.opacity-20 {
-    opacity: 0.2;
-}
-
-.opacity-25 {
-    opacity: 0.25;
-}
-
-.opacity-30 {
-    opacity: 0.3;
-}
-
-.opacity-35 {
-    opacity: 0.35;
-}
-
-.opacity-40 {
-    opacity: 0.4;
-}
-
-.opacity-45 {
-    opacity: 0.45;
-}
-
-.opacity-50 {
-    opacity: 0.5;
-}
-
-.opacity-55 {
-    opacity: 0.55;
-}
-
-.opacity-60 {
-    opacity: 0.6;
-}
-
-.opacity-65 {
-    opacity: 0.65;
-}
-
-.opacity-70 {
-    opacity: 0.7;
-}
-
-.opacity-75 {
-    opacity: 0.75;
-}
-
-.opacity-80 {
-    opacity: 0.8;
-}
-
-.opacity-85 {
-    opacity: 0.85;
-}
-
-.opacity-90 {
-    opacity: 0.9;
-}
-
-.opacity-95 {
-    opacity: 0.95;
-}
-
-.opacity-100 {
-    opacity: 1;
-}
-
-.opacity-110 {
-    opacity: 1.10;
-}
-
-.opacity-120 {
-    opacity: 1.20;
+@each $key, $value in $opacity-utilities {
+    .opacity-#{$key} {
+        opacity: $value;
+    }
 }

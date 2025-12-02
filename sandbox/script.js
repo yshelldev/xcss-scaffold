@@ -72,36 +72,41 @@ function OutputUpdate(updateComponent = false, newComponent = activeComponent) {
         OutputElement.className = "_";
         SymClassElement.innerHTML = selector;
 
-        const attributes = newComponent.attributes
-        if (typeof attributes === "object") {
-            RootMain.setAttribute("style", typeof attributes["style"] === "string" ? attributes["style"].slice(1, -1) : "")
-            Object.entries(attributes).forEach(([attr, value]) => {
-                if (typeof value === "string") {
-                    const fval = value.slice(1, -1);
+        const attributes = newComponent.attributes || {};
 
-                    if (attr === "class") {
-                        OutputElement.classList.add(...fval.split(" "))
-                    } else if (![
-                        "id", "style",
-                        "data-live-preview-output-container-debug",
-                        "data-live-preview-output-container-resize",
-                    ].includes(attr)) {
-                        OutputElement.setAttribute(attr, fval)
-                    }
-                }
-            })
-        } else {
-            RootMain.removeAttribute("style", "");
-            OutputElement.getAttributeNames.forEach(attr => {
-                if (![
-                    "id", "class", "style",
-                    "data-live-preview-output-container-debug",
-                    "data-live-preview-output-container-resize",
-                ].includes(attr)) {
-                    OutputElement.removeAttribute(attr)
-                }
-            })
-        }
+        RootMain.setAttribute(
+            "style",
+            typeof attributes["style"] === "string"
+                ? attributes["style"].replace(/^['"]|['"]$/g, "")
+                : ""
+        );
+
+        const attrTrace = {};
+        const constAttrs = [
+            "id", "style",
+            "data-live-preview-output-container-debug",
+            "data-live-preview-output-container-resize",
+            "data-live-preview-output-container-preserve"
+        ]
+        OutputElement.getAttributeNames().forEach(a => {
+            if (!constAttrs.includes(a) && a !== "class") { attrTrace[a] = true; }
+        });
+
+        Object.keys(attributes).forEach(a => {
+            if (!constAttrs.includes(a)) { attrTrace[a] = false; }
+        });
+
+        Object.entries(attrTrace).forEach(([attr, delflag]) => {
+            if (delflag) {
+                OutputElement.removeAttribute(attr)
+            } else if (attr === "class") {
+                const fval = attributes[attr].replace(/^['"]|['"]$/g, "")
+                OutputElement.classList.add(...fval.split(" "))
+            } else {
+                const fval = attributes[attr].replace(/^['"]|['"]$/g, "")
+                OutputElement.setAttribute(attr, fval)
+            }
+        })
     }
     Object.assign(activeComponent, newComponent);
 }
@@ -171,9 +176,9 @@ ws.onmessage = function (evt) {
             setTimeout(() => awaitRefresh = false, 250)
         }
         try {
-            const result = response.result;
-            if (result && typeof result === "object") {
-                OutputUpdate(true, result);
+            const newComponent = response.result;
+            if (newComponent && typeof newComponent === "object") {
+                OutputUpdate(true, newComponent);
             } else {
                 OutputUpdate(false);
             }

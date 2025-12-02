@@ -39,24 +39,6 @@ $positions: (
   }
 }
 
-// Offset sizes with designer-friendly units
-$offset-sizes: (
-  none: 0,
-  xSmall: var(---pos-top-xs, 0.25rem),
-  small: var(---pos-top-sm, 0.5rem),
-  medium: var(---pos-top-md, 1rem),
-  large: var(---pos-top-lg, 2rem),
-  xLarge: var(---pos-top-xl, 4rem)
-);
-
-@each $side in (top, bottom, left, right) {
-  @each $name, $val in $offset-sizes {
-    .#{$side}-#{$name} {
-      #{$side}: #{$val};
-    }
-  }
-}
-
 // Centering Utilities with clearer naming
 .top-center, .bottom-center {
   left: 50%;
