@@ -1,6 +1,6 @@
 # XCSS Scaffold: Spin Your Flavor
 
-**xcss-scaffold** is the default template bundled with **xcss-package**. No need to download it separately for your project.
+**xcss-scaffold** is the default template bundled with **xcss-central**. No need to download it separately for your project.
 
 Use this repository as a template to create your own XCSS frameworks and flavors.
 
@@ -73,7 +73,7 @@ Ensure that your package.json file contains correct author and repository detail
 }
 ```
 
-This configuration connects directly with the xcss-package tooling.
+This configuration connects directly with the xcss-central tooling.
 ​
 ### 5. Update `README.md`
 

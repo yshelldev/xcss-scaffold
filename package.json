@@ -41,6 +41,6 @@
     "sass": "latest"
   },
   "dependencies": {
-    "xcss-package": "latest"
+    "xcss-central": "latest"
   }
 }
