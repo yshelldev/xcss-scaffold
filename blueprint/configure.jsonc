@@ -11,20 +11,31 @@
       }
     }
   ],
-  "tweaks": {
-    "staple-prefix": "<div style=\"display: none;\">",
-    // prefix for staple replacement tags 
-    "staple-suffix": "</div>",
-    // suffix for staple replacement tags 
-    "styles-prefix": "<style>",
-    // prefix for styles replacement tags 
-    "styles-suffix": "</style>",
-    // suffix for styles replacement tags 
-    //
-    // === EXPERIMENTAL ===
-    "reload-period": 0
-    // rebuild interval in seconds, (0 => no reload)
-  },
   "vendors": "none",
-  "environment": "browser" // Used by extension 
+  "environment": "browser",
+  // 
+  // ════════════════════════════════════
+  // DEVELOPER OPTIONS
+  // ════════════════════════════════════
+  "sandbox": {
+    // Static configurations for sandbox environment.
+    // Useful for flavor/theme developers testing custom XCSS compositions.
+  },
+  "tweaks": {
+    // ═══════════════════════════════════
+    // STAPLE REPLACEMENT TAGS
+    // ═══════════════════════════════════
+    "staple-prefix": "<div style=\"display: none;\">",
+    "staple-suffix": "</div>",
+    // ═══════════════════════════════════
+    // STYLES REPLACEMENT TAGS
+    // ═══════════════════════════════════
+    "styles-prefix": "<style>",
+    "styles-suffix": "</style>",
+    // ═══════════════════════════════════
+    // EXPERIMENTAL FEATURES
+    // ═══════════════════════════════════
+    "reload-period": 0
+    // Rebuild interval in seconds (0 = disabled)
+  }
 }
