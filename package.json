@@ -9,9 +9,9 @@
     "libraries": "libraries"
   },
   "scripts": {
-    "lib:compile": "npx sass libsource:libraries --no-source-map",
+    "lib:build": "npx sass libsource:libraries --no-source-map",
     "lib:watch": "npx sass --watch libsource:libraries --no-source-map",
-    "build": "npm install --include=dev && npm run lib:compile "
+    "build": "npm install --include=dev && npm run lib:build "
   },
   "type": "module",
   "description": "Template for creating flavours for XCSS.",
