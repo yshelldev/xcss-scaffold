@@ -41,11 +41,14 @@ const outputState = {
     activateResize: false,
     preserveScale: false,
     activateDebug: false,
+    syncDeactivate: false,
 }
 
 
 let OutputStyle = '';
 function OutputUpdate(updateComponent = false, newComponent = activeComponent) {
+    if (outputState.syncDeactivate) { return; }
+
     if (OutputElement.hasAttribute('style')) { OutputStyle = OutputElement.getAttribute('style') ?? OutputStyle; }
 
     if (outputState.preserveScale) {
@@ -166,7 +169,7 @@ let awaitRefresh = false;
 ws.onmessage = function (evt) {
     const response = JSON.parse(evt.data);
     if (response.method === 'server-state-set' || response.method === 'server-state-init') {
-        console.log(response)
+        // console.log(response)
         tweakIndex[response.result.key]?.apply(response.result.value);
         OutputUpdate(false);
     } else if (response.method === 'sandbox-view') {
@@ -256,6 +259,16 @@ const tweaks = [
         if (this.element && value !== undefined) {
             const valBool = typeof value === "boolean" ? value : (value === 'true');
             this.element.checked = valBool;
+            if (valBool) this.element.setAttribute("checked", "")
+            else this.element.removeAttribute("checked")
+            OutputUpdate();
+        }
+    }),
+    new Tweak('live-preview-option-stop-sync', false, function (value = this.element?.checked) {
+        if (this.element && value !== undefined) {
+            const valBool = typeof value === "boolean" ? value : (value === 'true');
+            this.element.checked = valBool;
+            outputState.syncDeactivate = valBool;
             if (valBool) this.element.setAttribute("checked", "")
             else this.element.removeAttribute("checked")
             OutputUpdate();
