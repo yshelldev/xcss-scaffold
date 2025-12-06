@@ -46,8 +46,11 @@ const outputState = {
 
 
 let OutputStyle = '';
-function OutputUpdate(updateComponent = false, newComponent = activeComponent) {
-    if (outputState.syncDeactivate) { return; }
+function OutputUpdate(
+    updateComponent = false, 
+    newComponent = activeComponent, 
+    syncForce = !outputState.syncDeactivate
+) {
 
     if (OutputElement.hasAttribute('style')) { OutputStyle = OutputElement.getAttribute('style') ?? OutputStyle; }
 
@@ -65,7 +68,7 @@ function OutputUpdate(updateComponent = false, newComponent = activeComponent) {
     RootCssElement.innerText = outputState.useProjectCss ? newComponent.rootcss : "";
     CompCssElement.innerText = newComponent.compcss;
 
-    if (updateComponent) {
+    if (updateComponent && syncForce) {
         const staple = (typeof newComponent.staple === "string") ? newComponent.staple : '';
         const structure = (typeof newComponent.summon === "string" && newComponent.summon.length) ? newComponent.summon : "[Placeholder]";
         const selector = (typeof newComponent.symclass === "string" && newComponent.symclass.length) ? newComponent.symclass : '[N/A]';
@@ -165,6 +168,7 @@ ws.onerror = function (e) {
     console.error('WebSocket error:', e);
 };
 
+let roundZero = true;
 let awaitRefresh = false;
 ws.onmessage = function (evt) {
     const response = JSON.parse(evt.data);
@@ -181,12 +185,18 @@ ws.onmessage = function (evt) {
         try {
             const newComponent = response.result;
             if (newComponent && typeof newComponent === "object") {
-                OutputUpdate(true, newComponent);
+                if (roundZero) {
+                    OutputUpdate(true, newComponent, true);
+                } else {
+                    OutputUpdate(true, newComponent);
+                }
             } else {
                 OutputUpdate(false);
             }
         } catch (e) {
             console.error("Unable to update component!");
+        } finally {
+            roundZero = false;
         }
     }
 };
