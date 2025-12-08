@@ -5,9 +5,9 @@
       "target": "xrc",
       "stylesheet": "styles.css",
       "extensions": {
-        "html": [
-          "class"
-        ]
+        "html": {
+          "watch": ["class"]
+        }
       }
     }
   ],
@@ -25,8 +25,8 @@
     // ═══════════════════════════════════
     // STAPLE REPLACEMENT TAGS
     // ═══════════════════════════════════
-    "staple-prefix": "<div style=\"display: none;\">",
-    "staple-suffix": "</div>",
+    "staple-prefix": "<script> const xtatix={};",
+    "staple-suffix": "",
     // ═══════════════════════════════════
     // STYLES REPLACEMENT TAGS
     // ═══════════════════════════════════
