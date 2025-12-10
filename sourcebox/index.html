@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Sandbox</title>
+    <!-- style -->
+</head>
+
+<body id="live-preview-body" class="~$body" _$body="
+    background: var(--live-preview-extension-background);
+    margin: 0;
+    padding: 0;
+
+    &>main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+">
+
+    <div id="live-preview-widget" style="top: 16px; left:16px" class="&frag$$widget"></div>
+
+    <style _$op>
+        #live-preview-output-container {
+
+            &[data-live-preview-output-container-preserve="true"] {
+                box-shadow: 0px 0px 32px -24px rgba(128, 128, 128, 0.5);
+            }
+
+            &[data-live-preview-output-container-resize="true"] {
+                outline: solid 1px rgba(128, 128, 128, 0.5);
+                overflow: auto;
+                min-width: 1rem;
+                min-height: 1rem;
+                resize: both !important;
+            }
+
+            &[data-live-preview-output-container-debug="true"] {
+                outline: rgba(255, 0, 0, 0.4) solid 1px !important;
+
+                & * {
+                    outline: rgba(255, 0, 0, 0.4) solid 1px !important;
+
+                    &:hover {
+                        outline: rgb(255, 0, 0) solid 1px !important;
+                    }
+                }
+            }
+        }
+    </style>
+
+    <div id="live-preview-output-staple" style="display: none;"></div>
+
+    <style id="live-preview-root-css"></style>
+    <style id="live-preview-comp-css"></style>
+    <main id="live-preview-main" class="~$op">
+
+        <div id="live-preview-output-container" data-live-preview-output-container-resize="true"
+            data-live-preview-output-container-preserve="true" data-live-preview-output-container-debug="true">
+            <div>{Content}</div>
+        </div>
+    </main>
+
+    <!-- <iframe src="component/index.html" title="component" style="border:0; width:100vw; height:100vh; margin: 0"
+        loading="lazy" sandbox="allow-scripts allow-forms" referrerpolicy="no-referrer-when-downgrade">
+    </iframe> -->
+
+    <div style="display: none;"><!-- staple --></div>
+
+    <div class="&$$script"></div>
+</body>
+
+</html>

@@ -2,6 +2,8 @@
 .github
 .gitmodules
 
+xcss
 libsource
 node_modules
+sourcebox
 package-lock.json

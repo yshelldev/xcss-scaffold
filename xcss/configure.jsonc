@@ -1,12 +1,21 @@
 {
   "proxymap": [
     {
-      "source": "src",
-      "target": "xrc",
-      "stylesheet": "styles.css",
+      "source": "sandbox",
+      "target": "sourcebox",
+      "stylesheet": "index.css",
       "extensions": {
         "html": {
-          "watch": ["class"]
+          "watch": [
+            "id",
+            "class"
+          ]
+        },
+        "htm": {
+          "watch": [
+            "id",
+            "class"
+          ]
         }
       }
     }
