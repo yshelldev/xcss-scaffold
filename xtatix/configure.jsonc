@@ -2,7 +2,7 @@
   "proxymap": [
     {
       "source": "sandbox",
-      "target": "sourcebox",
+      "target": "sandsource",
       "stylesheet": "index.css",
       "extensions": {
         "html": {
