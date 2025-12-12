@@ -1,9 +1,9 @@
 {
   "name": "xcaffold",
-  "version": "0.0.27",
+  "version": "0.0.0",
   "configs": {
     "name": "scaffold",
-    "version": "0.0.27",
+    "version": "0.0.0",
     "sandbox": "sandbox",
     "blueprint": "blueprint",
     "libraries": "libraries"
@@ -19,14 +19,14 @@
   "homepage": "https://www.xtatix.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yshelldev/xcaffold"
+    "url": "https://github.com/xtatixone/xcaffold"
   },
   "author": {
     "name": "Vyshnav Prasad",
     "url": "https://www.yshell.dev"
   },
   "bugs": {
-    "url": "https://github.com/yshelldev/xcaffold/issues"
+    "url": "https://github.com/xtatixone/xcaffold/issues"
   },
   "funding": {
     "type": "github",

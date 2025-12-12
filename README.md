@@ -1,6 +1,4 @@
-# Xtatix Scaffold: Spin Your Flavor
-
-**xcaffold** is the default template bundled with **xtatix-central**. No need to download it separately for your project.
+# Xcaffold: Scaffold Template to Spin Your Flavor
 
 Use this repository as a template to create your own Xtatix frameworks and flavors.
 
@@ -72,7 +70,7 @@ Ensure that your package.json file contains correct author and repository detail
 ```json
 {
   "configs": {
-    "name": "xcaffold",
+    "name": "scaffold",
     "version": "0.0.0",
     "sandbox": "sandbox",
     "blueprint": "blueprint",

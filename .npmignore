@@ -3,7 +3,7 @@
 .gitmodules
 
 xtatix
+sandsrc
 libsource
 node_modules
-sourcebox
 package-lock.json
