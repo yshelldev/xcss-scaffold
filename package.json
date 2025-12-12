@@ -1,5 +1,5 @@
 {
-  "name": "xcss-scaffold",
+  "name": "xcaffold",
   "version": "0.0.27",
   "configs": {
     "name": "scaffold",
@@ -14,19 +14,19 @@
     "build": "npm install --include=dev && npm run lib:build "
   },
   "type": "module",
-  "description": "Template for creating flavours for XCSS.",
+  "description": "Template for creating flavours for Xtatix.",
   "license": "MIT",
-  "homepage": "https://www.xcss.io",
+  "homepage": "https://www.xtatix.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yshelldev/xcss-scaffold"
+    "url": "https://github.com/yshelldev/xcaffold"
   },
   "author": {
     "name": "Vyshnav Prasad",
     "url": "https://www.yshell.dev"
   },
   "bugs": {
-    "url": "https://github.com/yshelldev/xcss-scaffold/issues"
+    "url": "https://github.com/yshelldev/xcaffold/issues"
   },
   "funding": {
     "type": "github",
@@ -34,13 +34,13 @@
   },
   "keywords": [
     "css",
-    "xcss-template",
+    "xtatix-template",
     "css-framework"
   ],
   "dev-dependencies": {
     "sass": "latest"
   },
   "dependencies": {
-    "xcss-central": "latest"
+    "xtatix": "latest"
   }
 }

@@ -2,7 +2,7 @@
   "proxymap": [
     {
       "source": "sandbox",
-      "target": "sandsource",
+      "target": "sandsrc",
       "stylesheet": "index.css",
       "extensions": {
         "html": {
@@ -28,7 +28,7 @@
   // ════════════════════════════════════
   "sandbox": {
     // Static configurations for sandbox environment.
-    // Useful for flavor/theme developers testing custom XCSS compositions.
+    // Useful for flavor/theme developers testing custom Xtatix compositions.
   },
   "tweaks": {
     // ═══════════════════════════════════

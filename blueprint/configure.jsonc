@@ -6,7 +6,9 @@
       "stylesheet": "styles.css",
       "extensions": {
         "html": {
-          "watch": ["class"]
+          "watch": [
+            "class"
+          ]
         }
       }
     }
@@ -19,7 +21,7 @@
   // ════════════════════════════════════
   "sandbox": {
     // Static configurations for sandbox environment.
-    // Useful for flavor/theme developers testing custom XCSS compositions.
+    // Useful for flavor/theme developers testing custom Xtatix compositions.
   },
   "tweaks": {
     // ═══════════════════════════════════

@@ -1,32 +1,32 @@
-# XCSS Scaffold: Spin Your Flavor
+# Xtatix Scaffold: Spin Your Flavor
 
-**xcss-scaffold** is the default template bundled with **xcss-central**. No need to download it separately for your project.
+**xcaffold** is the default template bundled with **xtatix-central**. No need to download it separately for your project.
 
-Use this repository as a template to create your own XCSS frameworks and flavors.
+Use this repository as a template to create your own Xtatix frameworks and flavors.
 
 ## Navigation
 
 - [Installation](#installation)
 - [Create Flavour](#how-to-spin-your-flavour)
-- [Learn XCSS Basics](https://www.xcss.io/documentation)
+- [Learn Xtatix Basics](https://www.xtatix.io/documentation)
 
 # Installation
 
-1. Install prefered flavour of XCSS using your package manager:
+1. Install prefered flavour of Xtatix using your package manager:
 
 ```sh
-  npm install xcss-scaffold
-  yarn add xcss-scaffold
-  pnpm add xcss-scaffold
+  npm install xcaffold
+  yarn add xcaffold
+  pnpm add xcaffold
 ```
 
-2. Initialize XCSS in your project directory with the installed **flavour**:
+2. Initialize Xtatix in your project directory with the installed **flavour**:
 
 ```sh
-  xcss init xcss-scaffold
+  xtatix init xcaffold
 ```
 
-This creates the xcss/* config directory using your chosen flavour.
+This creates the xtatix/* config directory using your chosen flavour.
 
 ---
 
@@ -38,7 +38,7 @@ Use this scaffold template as a starting point for your customized CSS framework
 
 ### 1. Clone the Repository
 
-Start by cloning this repository to set up your XCSS scaffold project.
+Start by cloning this repository to set up your Xtatix scaffold project.
 
 ### 2. Configure for Your Development Setup
 
@@ -58,12 +58,12 @@ Adjust the folder structure to suit your project needs. If you do so, be sure to
 
 - **Purpose:** Live preview area for testing components.
 - **Customization:** Freely modify to fit your workflow while preserving API compatibility.
-- **Configuration:** ./xcss/configure.jsonc from working directory is automatically shared with sandbox-view responses for extended functionality.
+- **Configuration:** ./xtatix/configure.jsonc from working directory is automatically shared with sandbox-view responses for extended functionality.
 
 ##### `./blueprint`
 
 - **Purpose:** Contains foundational stylesheets, design tokens, and core system components.
-> **Important:** Do not modify directory structure. Edit only content within files to maintain XCSS compatibility.
+> **Important:** Do not modify directory structure. Edit only content within files to maintain Xtatix compatibility.
 
 ### 4. Update `package.json`
 
@@ -72,7 +72,7 @@ Ensure that your package.json file contains correct author and repository detail
 ```json
 {
   "configs": {
-    "name": "xcss-scaffold",
+    "name": "xcaffold",
     "version": "0.0.0",
     "sandbox": "sandbox",
     "blueprint": "blueprint",
@@ -81,7 +81,7 @@ Ensure that your package.json file contains correct author and repository detail
 }
 ```
 
-This configuration connects directly with the xcss-central tooling.
+This configuration connects directly with the xtatix-central tooling.
 ​
 ### 5. Update `README.md`
 
