@@ -1,4 +1,5 @@
-<sketch frag$$widget="
+<sketch 
+frag$$widget="
 	gap: .8rem !important;
 	display: flex !important;
 	box-sizing: border-box !important;
@@ -24,101 +25,104 @@
 	&:hover {
 		opacity: .9 !important;
 	}
-">
-	<div class="~$options" _$options="
-    	gap: 1em !important;
-    	display: flex !important;
-    	align-items: center !important;
-    	justify-content: center !important;
-    	&>label {
-    		display: flex !important;
-    		align-items: center !important;
-    		justify-content: center !important;
-    		color: var(--live-preview-extension-dark) !important;
-    		transition: opacity 0.2s ease !important;
-    		opacity: .5 !important;
-    		border-radius: .5rem;
-    		padding: .4rem !important;
-    		gap: 0rem !important;
-    		& input {
-    			visibility: hidden !important;
-    			border: none !important;
-    			width: 0 !important;
-    			padding: 0 !important;
-    			background-color: .2rem solid var(--live-preview-extension-background) !important;
-    		}
-    		&>* {
-    			margin: 0 !important;
-    			width: var(--live-preview-extension-delta) !important;
-    			height: var(--live-preview-extension-delta) !important;
-    		}
-    		&:has(input[type=checkbox][checked]) {
-    			--border-color: var(--live-preview-extension-active);
-    		}
-    		&:has(input[type=checkbox]) {
-    			--border-color: var(--live-preview-extension-inactive);
-    			box-shadow: inset
-    				var(--border-color) 0px 0px 6px 1px !important;
-    		}
-    	}
-    	&>:hover {
-    		opacity: 1 !important;
-    	}
-    ">
+"
+>
+	<div class="~$options" 
+	_$options="
+		gap: 1em !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		&>label {
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			color: var(--live-preview-extension-dark) !important;
+			transition: opacity 0.2s ease !important;
+			opacity: .5 !important;
+			border-radius: .5rem;
+			padding: .4rem !important;
+			gap: 0rem !important;
+			& input {
+				visibility: hidden !important;
+				border: none !important;
+				width: 0 !important;
+				padding: 0 !important;
+				background-color: .2rem solid var(--live-preview-extension-background) !important;
+			}
+			&>* {
+				margin: 0 !important;
+				width: var(--live-preview-extension-delta) !important;
+				height: var(--live-preview-extension-delta) !important;
+			}
+			&:has(input[type=checkbox][checked]) {
+				--border-color: var(--live-preview-extension-active);
+			}
+			&:has(input[type=checkbox]) {
+				--border-color: var(--live-preview-extension-inactive);
+				box-shadow: inset
+					var(--border-color) 0px 0px 6px 1px !important;
+			}
+		}
+		&>:hover {
+			opacity: 1 !important;
+		}
+	"
+	>
 
 		<label id="live-preview-option-drag-handle" title="Move Widget">
-			<svg class="&lucide$$icon-move"></svg>
-		</label>
-
+			<svg><style &="= 1*lucide$$icon-move" /></svg> </label>
 		<label for="live-preview-option-color-picker" title="Background Color">
-			<svg class="&lucide$$icon-bgcolor"></svg>
+			<svg><style &="= 1*lucide$$icon-bgcolor" /></svg>
 			<input id="live-preview-option-color-picker" type="color">
 		</label>
 
 		<div style="width: var(--live-preview-extension-delta);"></div>
 
 		<label for="live-preview-option-stop-sync" title="Deactivate Sync">
-			<svg class="&lucide$$icon-unsync"></svg>
+			<svg><style &="= 1*lucide$$icon-unsync" /></svg>
 			<input id="live-preview-option-stop-sync" type="checkbox">
 		</label>
 
 		<label for="live-preview-option-live-cursor" title="Live Cursor">
-			<svg class="&lucide$$icon-cursor"></svg>
+			<svg><style &="= 1*lucide$$icon-cursor" /></svg>
 			<input id="live-preview-option-live-cursor" type="checkbox">
 		</label>
 
 		<label for="live-preview-option-project-index" title="Project Theme">
-			<svg class="&lucide$$icon-theme"></svg>
+			<svg><style &="= 1*lucide$$icon-theme" /></svg>
 			<input id="live-preview-option-project-index" type="checkbox">
 		</label>
 
 		<label for="live-preview-option-container-resize" title="Rescale Handle">
-			<svg class="&lucide$$icon-rescale"></svg>
+			<svg><style &="= 1*lucide$$icon-rescale" /></svg>
 			<input id="live-preview-option-container-resize" type="checkbox">
 		</label>
 
 		<label for="live-preview-option-preserve-scale" title="Preserve Scale">
-			<svg class="&lucide$$icon-preserve"></svg>
+			<svg><style &="= 1*lucide$$icon-preserve" /></svg>
 			<input id="live-preview-option-preserve-scale" type="checkbox">
 		</label>
 
 		<label for="live-preview-option-debug-mode" title="Debug Mode">
-			<svg class="&lucide$$icon-debug"></svg>
+			<svg><style &="= 1*lucide$$icon-debug" /></svg>
 			<input id="live-preview-option-debug-mode" type="checkbox">
 		</label>
 
 	</div>
-	<div id="live-preview-symclass" class="~$symclass" _$symclass="
-    	margin: 0 !important;
-    	font-size: 1rem !important;
-    	border-radius: .5em !important;
-    	font-family: var(--live-preview-font-family) !important;
-    	color: var(--live-preview-extension-dark) !important;
-    	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-    	padding: .4rem !important;
-    	-webkit-user-select: none;
-    	-moz-user-select: none;
-    	-ms-user-select: none;
-    	user-select: none;
-    ">N/A</div>
+	<div id="live-preview-symclass" class="~$symclass" 
+	_$symclass="
+		margin: 0 !important;
+		font-size: 1rem !important;
+		border-radius: .5em !important;
+		font-family: var(--live-preview-font-family) !important;
+		color: var(--live-preview-extension-dark) !important;
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+		padding: .4rem !important;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	"
+	>N/A</div>
 </sketch>
