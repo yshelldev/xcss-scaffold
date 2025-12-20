@@ -4,26 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Component Sandbox</title>
+    <title>Sketchpad</title>
     <!-- style -->
 </head>
 
-<body id="live-preview-body" class="~$body" _$body="
-    background: var(--live-preview-extension-background);
-    margin: 0;
-    padding: 0;
-
-    &>main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 100vw;
-        min-height: 100vh;
-    }
+<body id="live-preview-body" class="~$body" 
+_$body="
+	background: var(--live-preview-extension-background);
+	margin: 0;
+	padding: 0;
+	&>main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 100vw;
+		min-height: 100vh;
+	}
 ">
 
     <div id="live-preview-widget" style="top: 16px; left:16px" class="~frag$$widget">
-        <sketch &="= 1*frag$$widget" />
+        <sketch 
+        &="= *frag$$widget" />
     </div>
 
     <style _$op>
@@ -67,13 +68,12 @@
         </div>
     </main>
 
-    <!-- <iframe src="component/index.html" title="component" style="border:0; width:100vw; height:100vh; margin: 0"
-        loading="lazy" sandbox="allow-scripts allow-forms" referrerpolicy="no-referrer-when-downgrade">
-    </iframe> -->
+    <div style="display: none;">
+        <!-- sketch -->
+    </div>
 
-    <div style="display: none;"><!-- sketch --></div>
-
-    <sketch &="= 1*$$script" />
+    <sketch 
+    &="= 1*$$script" />
 </body>
 
 </html>
