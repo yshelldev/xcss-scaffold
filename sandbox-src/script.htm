@@ -28,12 +28,12 @@
         const OutputElement = document.getElementById('live-preview-output-container');
         const RootCssElement = document.getElementById('live-preview-root-css');
         const CompCssElement = document.getElementById('live-preview-comp-css');
-        const SymClassElement = document.getElementById('live-preview-symclass');
+        const SymlinkElement = document.getElementById('live-preview-symlink');
 
         const activeComponent = {
             stitch: "",
             sketch: "",
-            symclass: "",
+            symlink: "",
             attributes: {},
             rootcss: "",
             compcss: "",
@@ -75,12 +75,12 @@
 
                 const stitch = (typeof newComponent.stitch === "string") ? newComponent.stitch : '';
                 const structure = (typeof newComponent.sketch === "string" && newComponent.sketch.length) ? newComponent.sketch : "[Placeholder]";
-                const selector = (typeof newComponent.symclass === "string" && newComponent.symclass.length) ? newComponent.symclass : '[N/A]';
+                const selector = (typeof newComponent.symlink === "string" && newComponent.symlink.length) ? newComponent.symlink : '[N/A]';
 
                 StitchElement.innerHTML = stitch;
                 OutputElement.innerHTML = structure;
                 OutputElement.className = "_";
-                SymClassElement.innerHTML = selector;
+                SymlinkElement.innerHTML = selector;
 
                 const attributes = newComponent.attributes || {};
 
