@@ -1,5 +1,5 @@
-sandbox
+sketchpad
 libraries
 node_modules
 package-lock.json
-!sandbox/index.html
+!sketchpad/index.html

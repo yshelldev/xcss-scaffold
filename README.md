@@ -40,7 +40,7 @@ Start by cloning this repository to set up your Xtatix scaffold project.
 
 ### 2. Configure for Your Development Setup
 
-The scaffold uses Sass as its CSS compiler, which helps efficiently create and maintain multiple class variations with similar structures. A vanilla JS sandbox is included for fast previews—you can rewrite it to work with your preferred framework as long as you adhere to the provided API methods and avoid breaking core logic.
+The scaffold uses Sass as its CSS compiler, which helps efficiently create and maintain multiple class variations with similar structures. A vanilla JS sketchpad is included for fast previews—you can rewrite it to work with your preferred framework as long as you adhere to the provided API methods and avoid breaking core logic.
 
 ### 3. Customize Template Folders
 
@@ -52,11 +52,11 @@ Adjust the folder structure to suit your project needs. If you do so, be sure to
 - **Reference:** See Libraries documentation for naming conventions and management.
 - **Customization:** Use your preferred CSS compiler (Sass used here—replace as needed).
 
-##### `./sandbox`
+##### `./sketchpad`
 
 - **Purpose:** Live preview area for testing components.
 - **Customization:** Freely modify to fit your workflow while preserving API compatibility.
-- **Configuration:** ./xtatix/configure.jsonc from working directory is automatically shared with sandbox-view responses for extended functionality.
+- **Configuration:** ./xtatix/configure.jsonc from working directory is automatically shared with sketchpad-view responses for extended functionality.
 
 ##### `./blueprint`
 
@@ -72,7 +72,7 @@ Ensure that your package.json file contains correct author and repository detail
   "configs": {
     "name": "scaffold",
     "version": "0.0.0",
-    "sandbox": "sandbox",
+    "sketchpad": "sketchpad",
     "blueprint": "blueprint",
     "libraries": "libraries"
   }

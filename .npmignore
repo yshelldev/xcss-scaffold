@@ -8,6 +8,6 @@ libsource
 node_modules
 package-lock.json
 
-sandbox/**
-!sandbox/index.html
+sketchpad/**
+!sketchpad/index.html
 !blueprint/libraries/.gitignore

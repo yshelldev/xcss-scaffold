@@ -1,8 +1,8 @@
 {
   "proxymap": [
     {
-      "source": "sandbox-src",
-      "target": "sandbox",
+      "source": "sketchpad-src",
+      "target": "sketchpad",
       "stylesheet": "index.css",
       "extensions": {
         "html": {
@@ -26,8 +26,8 @@
   // ════════════════════════════════════
   // DEVELOPER OPTIONS
   // ════════════════════════════════════
-  "sandbox": {
-    // Static configurations for sandbox environment.
+  "sketchpad": {
+    // Static configurations for sketchpad environment.
     // Useful for flavor/theme developers testing custom Xtatix compositions.
   },
   "tweaks": {

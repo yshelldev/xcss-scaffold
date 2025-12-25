@@ -178,7 +178,7 @@
             if (response.method === 'server-state-set' || response.method === 'server-state-init') {
                 tweakIndex[response.result.key]?.apply(response.result.value);
                 OutputUpdate(false);
-            } else if (response.method === 'sandbox-view') {
+            } else if (response.method === 'sketchpad-view') {
                 if (AUTOREFRESH) {
                     if (awaitRefresh) { return; }
                     awaitRefresh = true;
@@ -332,7 +332,7 @@
             if (!awaitRefresh) {
                 ws.send(JSON.stringify({
                     jsonrpc: "2.0",
-                    method: 'sandbox-view',
+                    method: 'sketchpad-view',
                     id: Date.now(),
                     params: {}
                 }));
