@@ -13,15 +13,15 @@ Use this repository as a template to create your own Alchira frameworks and flav
 1. Install prefered flavour of Alchira using your package manager:
 
 ```sh
-  npm install scaffold
-  yarn add scaffold
-  pnpm add scaffold
+  npm install {{package-name}}
+  yarn add {{package-name}}
+  pnpm add {{package-name}}
 ```
 
 2. Initialize Alchira in your project directory with the installed **flavour**:
 
 ```sh
-  alchira init scaffold
+  al init scaffold
 ```
 
 This creates the alchira/* config directory using your chosen flavour.

@@ -1,7 +1,14 @@
 {
-  "name": "scaffold",
+  "name": "@alchira/scaffold",
   "description": "Minimally-flavoured Alchira scaffold for small, non-production projects.",
   "version": "0.0.0",
+  "alconfig": {
+    "name": "scaffold",
+    "version": "0.0.0",
+    "sketchpad": "sketchpad",
+    "blueprint": "blueprint",
+    "libraries": "libraries"
+  },
   "scripts": {
     "lib:build": "npx sass libraries-src:libraries --no-source-map",
     "lib:watch": "npx sass --watch libsource:libraries --no-source-map",
