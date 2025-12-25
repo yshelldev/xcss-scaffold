@@ -1,5 +1,5 @@
 {
-  "name": "xcaffold",
+  "name": "scaffold",
   "description": "Minimally-flavoured Alchira scaffold for small, non-production projects.",
   "version": "0.0.0",
   "scripts": {
@@ -14,14 +14,14 @@
   "homepage": "https://www.alchira.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alchira/xcaffold"
+    "url": "https://github.com/alchira/scaffold"
   },
   "author": {
     "name": "Vyshnav Prasad",
     "url": "https://www.yshell.dev"
   },
   "bugs": {
-    "url": "https://github.com/alchira/xcaffold/issues"
+    "url": "https://github.com/alchira/scaffold/issues"
   },
   "funding": {
     "type": "github",

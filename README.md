@@ -1,4 +1,4 @@
-# Xcaffold: Scaffold Template to Spin Your Flavor
+# Scaffold: Scaffold Template to Spin Your Flavor
 
 Use this repository as a template to create your own Alchira frameworks and flavors.
 
@@ -13,15 +13,15 @@ Use this repository as a template to create your own Alchira frameworks and flav
 1. Install prefered flavour of Alchira using your package manager:
 
 ```sh
-  npm install xcaffold
-  yarn add xcaffold
-  pnpm add xcaffold
+  npm install scaffold
+  yarn add scaffold
+  pnpm add scaffold
 ```
 
 2. Initialize Alchira in your project directory with the installed **flavour**:
 
 ```sh
-  alchira init xcaffold
+  alchira init scaffold
 ```
 
 This creates the alchira/* config directory using your chosen flavour.
