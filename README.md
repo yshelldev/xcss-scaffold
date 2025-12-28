@@ -1,4 +1,4 @@
-# Scaffold: Scaffold Template to Spin Your Flavor
+# Scaffold: Template to Spin Your Flavor
 
 Use this repository as a template to create your own Alchira frameworks and flavors.
 
@@ -22,6 +22,7 @@ Use this repository as a template to create your own Alchira frameworks and flav
 
 ```sh
   al init {{package-name}}
+  alchira init {{package-name}}
 ```
 
 This creates the alchira/* config directory using your chosen flavour.
